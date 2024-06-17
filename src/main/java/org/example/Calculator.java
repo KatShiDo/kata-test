@@ -29,7 +29,7 @@ class Calculator {
 
     public static String intToRoman(int value) {
         if (value < 1 || value > 3999)
-            return "Invalid Roman Number Value";
+            throw new IllegalArgumentException("Illegal roman value");
         StringBuilder s = new StringBuilder();
         while (value >= 1000) {
             s.append("M");
