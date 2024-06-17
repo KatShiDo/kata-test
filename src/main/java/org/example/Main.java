@@ -32,8 +32,8 @@ public class Main {
                 throw new IllegalArgumentException("Invalid operation: " + operation);
             }
 
-            if (Arrays.asList(romanNumbers).contains(first)) {
-                if (Arrays.asList(romanNumbers).contains(second)) {
+            if (Arrays.asList(romanNumbers).contains(first) || Arrays.asList(romanNumbers).contains(second)) {
+                if (Arrays.asList(romanNumbers).contains(first) && Arrays.asList(romanNumbers).contains(second)) {
                     return Calculator.calcRoman(first, second, operation);
                 }
                 else {
